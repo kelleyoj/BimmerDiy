@@ -189,3 +189,42 @@ footer ul li a{
    color: white;
 }
 
+/* Flip images */
+.flip-container {
+    perspective: 1000;
+}
+
+.flip-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    width: 100%;
+    height: 250px;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+}
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+
+.back{
+    background-image: url("https://images.unsplash.com/photo-1520932085980-239a0bef9c80?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0e24ec087f1b881d0e24cdbbe004dc4d&auto=format&fit=crop&w=1350&q=80");
+    background-position: center;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    background-color: black;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.back div{
+    margin-top: 10%;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
